@@ -1,0 +1,14 @@
+#subl shortcut for sublime - you can replace this with 'code' 
+#makes dir per date in .notes folder on desktop, make sure this is created first.
+
+
+notes () 
+{ 
+    subl $HOME/Desktop/.notes/$(date | awk '{print $1,$2,$3, $6}' | tr ' ' '_' )
+} 
+
+code () 
+{ 
+    VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $*
+}
+
