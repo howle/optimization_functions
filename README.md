@@ -1,0 +1,5 @@
+    subl $HOME/Desktop/.notes/: This opens the text editor "Sublime Text" and specifies the directory where the new file will be created. The $HOME variable is a common shell variable that refers to the user's home directory. So this part of the command is opening the .notes directory inside the user's Desktop folder.
+
+    $(date | awk '{print $1,$2,$3, $6}' | tr ' ' '_' ): This is a complex command that generates a string based on the current date and time. The date command outputs the current date and time in a specific format. The output is then piped (|) to awk, which is a command-line utility for parsing and manipulating text. The awk command is used to extract certain parts of the date output and rearrange them. Finally, the output is piped to tr, which is a command that translates or deletes specified characters in a string. In this case, it is replacing spaces with underscores.
+
+So the entire function creates a new file on the user's desktop, names it based on the current date and time, and opens it in the text editor Sublime Text. The file will be placed in the .notes directory inside the user's Desktop folder.
